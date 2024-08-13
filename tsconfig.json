@@ -1,7 +1,18 @@
 {
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "types": ["node"],
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
+      "@containers": ["src/containers"],
+      "@containers/*": ["src/containers/*"],
+      "@layouts": ["src/layouts"],
+      "@layouts/*": ["src/layouts/*"]
+    }
+  },
+  "include": ["src", "src/**/*", ".eslintrc.config.cjs", "vite.config.ts"],
   "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
