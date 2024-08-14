@@ -1,5 +1,5 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,19 +9,16 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // custom css
+import { SlidePage } from "./components";
 import "./styles.scss";
 
 const SwiperCmp: React.FC<Props> = () => {
   return (
     <div className="swiper-container">
-      <Swiper
-        modules={[Navigation, Pagination]}
-        rewind={true}
-        navigation={true}
-        pagination={true}
-        className="mySwiper"
-      >
-        <SwiperSlide>Slide 1</SwiperSlide>
+      <Swiper modules={[Navigation, Pagination]} rewind={true} navigation={true} pagination={true} className="mySwiper">
+        <SwiperSlide>
+          <SlidePage />
+        </SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>

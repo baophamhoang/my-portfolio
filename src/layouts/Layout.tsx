@@ -1,15 +1,18 @@
+import { AppShell } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 import { PropsWithChildren } from "react";
 
 const Layout: React.FC<PropsWithChildren> = ({ children }) => {
+  const [opened, { toggle }] = useDisclosure();
   return (
     <>
-      <Container>{children}</Container>
+      <AppShell header={{ height: 60 }} padding="md">
+        <AppShell.Header p={10}>
+        </AppShell.Header>
+        <AppShell.Main>{children}</AppShell.Main>
+      </AppShell>
     </>
   );
-};
-
-const Container: React.FC<PropsWithChildren> = ({ children }) => {
-  return <div style={{padding: '10vh 10px 0'}}>{children}</div>;
 };
 
 export default Layout;
