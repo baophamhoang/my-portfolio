@@ -1,9 +1,12 @@
 import { Swiper } from "@components";
+import { Container } from "@mantine/core";
 
 const Home: React.FC = () => {
   return (
     <>
-      <Swiper />
+      <Container size='md'>
+        <Swiper />
+      </Container>
     </>
   );
 };
