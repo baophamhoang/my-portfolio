@@ -1,0 +1,21 @@
+.book {
+  position: relative;
+  display: flex;
+  margin: auto;
+  width: 40cqmin;
+  /*1* let pointer event go trough pages of lower Z than .book */
+  pointer-events: none;
+  transform-style: preserve-3d;
+  transition: translate 1s;
+  translate: calc(min(var(--c), 1) * 50%) 0%;
+  /* Incline on the X axis for pages preview */
+  rotate: 1 0 0 30deg;
+}
+
+
+.book {
+  counter-reset: page -1;
+  & a {
+    color: inherit;
+  }
+}
