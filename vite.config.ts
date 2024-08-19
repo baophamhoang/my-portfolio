@@ -18,9 +18,11 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      "@configs": pathResolve("src/configs"),
       "@components": pathResolve("src/components"),
       "@containers": pathResolve("src/containers"),
       "@layouts": pathResolve("src/layouts"),
+      "@hooks": pathResolve("src/hooks"),
       src: pathResolve("src"),
     },
   },

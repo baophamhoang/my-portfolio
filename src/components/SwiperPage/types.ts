@@ -4,5 +4,6 @@ export interface SwiperPageProps {
   back?: React.ReactElement;
   isFrontCover?: boolean;
   isBackCover?: boolean;
+  isActive?: boolean;
   onSwiperPageClick: (e: React.MouseEvent<HTMLElement>, idx: number) => void;
 }
