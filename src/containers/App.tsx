@@ -1,11 +1,21 @@
 import { Layout } from "@layouts";
-import Home from "./Home/Home";
+import React, { Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import { PATHS } from "src/configs";
+import LoadingContainer from "./StartupContainer/LoadingContainer";
+
+// Route containers
+const Home = React.lazy(() => import("./Home"));
 
 const App: React.FC = () => {
   return (
     <>
       <Layout>
-        <Home></Home>
+        <Suspense fallback={<LoadingContainer />}>
+          <Routes>
+            <Route path={PATHS.ROOT} element={<Home />}></Route>
+          </Routes>
+        </Suspense>
       </Layout>
     </>
   );

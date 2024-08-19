@@ -1,11 +1,14 @@
-import { SwiperPageInitialProps } from "@components";
+import { ImageDisplay, SwiperPageInitialProps } from "@components";
 import { Anchor, Box, Code, Divider, Image, Text, Title } from "@mantine/core";
 
 export const bookPages: SwiperPageInitialProps[] = [
   {
     front: (
       <Box>
-        <Title order={1}>FlipBook</Title>
+        <Box pos="absolute" h="100%" w="100%" style={{ zIndex: "-1" }}>
+          <ImageDisplay src="https://picsum.photos/id/984/800/900" />
+        </Box>
+        <Title order={1}>Test ne</Title>
         <Box>
           <Text>2024.Second edition</Text>
         </Box>
@@ -91,6 +94,9 @@ export const bookPages: SwiperPageInitialProps[] = [
     ),
     back: (
       <Box>
+        <Box pos="absolute" h="100%" w="100%" style={{ zIndex: "-1" }}>
+          <ImageDisplay src="https://picsum.photos/id/984/800/900" />
+        </Box>
         <Title order={3}>That's all, folks</Title>
         <Box>
           <Text>FlipBook code and content:</Text>

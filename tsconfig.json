@@ -5,12 +5,16 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
+      "@configs": ["src/configs"],
+      "@configs/*": ["src/configs/*"],
       "@components": ["src/components"],
       "@components/*": ["src/components/*"],
       "@containers": ["src/containers"],
       "@containers/*": ["src/containers/*"],
       "@layouts": ["src/layouts"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@hooks": ["src/hooks"],
+      "@hooks/*": ["src/hooks/*"]
     }
   },
   "include": ["src", "src/**/*", ".eslintrc.config.cjs", "vite.config.ts"],
