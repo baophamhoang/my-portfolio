@@ -23,6 +23,7 @@ export default defineConfig({
       "@containers": pathResolve("src/containers"),
       "@layouts": pathResolve("src/layouts"),
       "@hooks": pathResolve("src/hooks"),
+      "@utils": pathResolve("src/utils"),
       src: pathResolve("src"),
     },
   },

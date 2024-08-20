@@ -1,7 +1,7 @@
 export interface SwiperPageProps {
   idx: number;
-  front?: React.ReactElement;
-  back?: React.ReactElement;
+  front?: React.FunctionComponent| React.ReactElement;
+  back?: React.FunctionComponent| React.ReactElement;
   isFrontCover?: boolean;
   isBackCover?: boolean;
   isActive?: boolean;
