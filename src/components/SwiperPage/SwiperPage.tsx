@@ -3,6 +3,7 @@ import { Box } from "@mantine/core";
 import cn from "classnames";
 import React from "react";
 import classes from "./SwiperPage.module.scss";
+import { renderComponentOrElement } from "@utils";
 
 const SwiperPage: React.FC<SwiperPageProps> = ({
   idx,
@@ -20,11 +21,11 @@ const SwiperPage: React.FC<SwiperPageProps> = ({
     >
       {/* front */}
       <Box className={cn(classes.front, { [classes.cover]: isFrontCover })}>
-        {front}
+        <>{renderComponentOrElement(front)}</>
       </Box>
       {/* back */}
       <Box className={cn(classes.back, { [classes.cover]: isBackCover })}>
-        {back}
+        <>{renderComponentOrElement(back)}</>
       </Box>
     </Box>
   );

@@ -14,7 +14,9 @@
       "@layouts": ["src/layouts"],
       "@layouts/*": ["src/layouts/*"],
       "@hooks": ["src/hooks"],
-      "@hooks/*": ["src/hooks/*"]
+      "@hooks/*": ["src/hooks/*"],
+      "@utils": ["src/utils"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src", "src/**/*", ".eslintrc.config.cjs", "vite.config.ts"],
