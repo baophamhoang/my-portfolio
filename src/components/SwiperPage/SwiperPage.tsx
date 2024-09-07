@@ -1,5 +1,5 @@
 import { Empty, SwiperPageProps } from "@components";
-import { Box } from "@mantine/core";
+import { Box, useMantineTheme } from "@mantine/core";
 import cn from "classnames";
 import React from "react";
 import classes from "./SwiperPage.module.scss";
@@ -13,6 +13,7 @@ const SwiperPage: React.FC<SwiperPageProps> = ({
   isBackCover,
   onSwiperPageClick,
 }) => {
+  const { colors } = useMantineTheme();
   return (
     <Box
       className={classes.page}
@@ -20,11 +21,21 @@ const SwiperPage: React.FC<SwiperPageProps> = ({
       onClick={(e) => onSwiperPageClick(e, idx)}
     >
       {/* front */}
-      <Box className={cn(classes.front, { [classes.cover]: isFrontCover })}>
+      <Box
+        className={cn(classes.front, { [classes.cover]: isFrontCover })}
+        style={{
+          borderColor: colors.blue[5],
+        }}
+      >
         <>{renderComponentOrElement(front)}</>
       </Box>
       {/* back */}
-      <Box className={cn(classes.back, { [classes.cover]: isBackCover })}>
+      <Box
+        className={cn(classes.back, { [classes.cover]: isBackCover })}
+        style={{
+          borderColor: colors.blue[5],
+        }}
+      >
         <>{renderComponentOrElement(back)}</>
       </Box>
     </Box>
