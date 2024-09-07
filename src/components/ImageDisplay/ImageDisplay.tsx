@@ -1,8 +1,8 @@
-import LoadingContainer from "@containers/StartupContainer/LoadingContainer";
-import { Box, Image, ImageProps } from "@mantine/core";
+import { LOADING_GIF } from "@configs";
+import { Image, ImageProps, Stack } from "@mantine/core";
 import React, { ReactEventHandler, useState } from "react";
 
-const ImageDisplay: React.FC<ImageProps> = (props) => {
+const ImageDisplay: React.FC<Props> = (props) => {
   const [loaded, setLoaded] = useState<boolean>(false);
   const onImageLoaded: ReactEventHandler<HTMLImageElement> = (e) => {
     setLoaded(true);
@@ -10,9 +10,9 @@ const ImageDisplay: React.FC<ImageProps> = (props) => {
   return (
     <>
       {!loaded && (
-        <Box h="100%">
-          <LoadingContainer />
-        </Box>
+        <Stack h="100%" w="100%" justify="center" align="center">
+          <Image w={100} src={LOADING_GIF} />
+        </Stack>
       )}
       <Image
         style={loaded ? { ...props.style } : { display: "none" }}
@@ -22,5 +22,7 @@ const ImageDisplay: React.FC<ImageProps> = (props) => {
     </>
   );
 };
+
+interface Props extends ImageProps {}
 
 export default ImageDisplay;
