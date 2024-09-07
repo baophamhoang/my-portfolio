@@ -5,7 +5,7 @@ import { FaNodeJs } from "react-icons/fa6";
 
 export interface CardListItem {
   label: string;
-  icon?: IconType;
+  icon: IconType;
 }
 
 export const frontEndListItems: CardListItem[] = [
