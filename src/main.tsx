@@ -6,16 +6,23 @@ import "@mantine/core/styles.css";
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { emotionTransform, MantineEmotionProvider } from "@mantine/emotion";
 import "./index.scss";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <MantineProvider theme={theme} defaultColorScheme="auto">
-      <BrowserRouter>
-        <Suspense fallback={<LoadingContainer />}>
-          <App />
-        </Suspense>
-      </BrowserRouter>
+    <MantineProvider
+      theme={theme}
+      stylesTransform={emotionTransform}
+      defaultColorScheme="auto"
+    >
+      <MantineEmotionProvider>
+        <BrowserRouter>
+          <Suspense fallback={<LoadingContainer />}>
+            <App />
+          </Suspense>
+        </BrowserRouter>
+      </MantineEmotionProvider>
     </MantineProvider>
   </StrictMode>
 );
