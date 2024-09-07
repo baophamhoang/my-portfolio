@@ -44,16 +44,24 @@ const PageOneBack: React.FC = () => {
 
 const CardItem: React.FC<{ item: CardListItem }> = ({ item }) => {
   return (
-    <Card className={classes.card} >
-      <Stack align="center" gap={1} >
+    <Card
+      className={classes.card}
+      styles={(theme) => ({
+        root: {
+          background: "transparent",
+          "&:hover": {
+            background: theme.colors.blue[5],
+          },
+        },
+      })}
+    >
+      <Stack align="center" gap={1}>
         <Box>
           <ThemeIcon size="md" variant="transparent">
             {renderComponentOrElement(item.icon)}
           </ThemeIcon>
         </Box>
-        <Title order={6} >
-          {item.label}
-        </Title>
+        <Title order={6}>{item.label}</Title>
       </Stack>
     </Card>
   );
