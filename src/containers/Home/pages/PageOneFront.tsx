@@ -22,7 +22,7 @@ const PageOneFront: React.FC = () => {
           w={200}
           radius="100"
           style={{ border: "7px solid #C5705D" }}
-        ></ImageDisplay>
+        />
         <Title order={1}>Pham Bao</Title>
         <Title order={3}>Software Engineer</Title>
         <Group mt={5}>
