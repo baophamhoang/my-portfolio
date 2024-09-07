@@ -28,4 +28,17 @@ export default defineConfig({
     },
   },
   base: "/",
+  build: {
+    outDir: "dist",
+    target: "esnext",
+    modulePreload: false,
+    minify: false,
+    cssCodeSplit: false,
+    commonjsOptions: {
+      include: [/node_modules/],
+      extensions: [".js", ".cjs"],
+      strictRequires: true,
+      transformMixedEsModules: true,
+    },
+  },
 });

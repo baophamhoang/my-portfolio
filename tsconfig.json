@@ -1,9 +1,15 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
+    "skipLibCheck": true,
     "types": ["node"],
-    "esModuleInterop": true,
     "baseUrl": ".",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "noEmit": true,
     "paths": {
       "@configs": ["src/configs"],
       "@configs/*": ["src/configs/*"],
@@ -19,7 +25,7 @@
       "@utils/*": ["src/utils/*"]
     }
   },
-  "include": ["src", "src/**/*", ".eslintrc.config.cjs", "vite.config.ts"],
+  "include": ["src", "src/**/*", "eslintrc.config.cjs", "vite.config.ts"],
   "files": [],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

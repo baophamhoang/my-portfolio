@@ -10,16 +10,16 @@ const HoverableVideoFrame: React.FC<Props> = ({
 }) => {
   const theme = useMantineTheme();
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleMouseEnter = () => {
     setIsPlaying(true);
-    videoRef.current.play();
+    videoRef.current?.play();
   };
 
   const handleMouseLeave = () => {
     setIsPlaying(false);
-    videoRef.current.pause();
+    videoRef.current?.pause();
   };
 
   return (

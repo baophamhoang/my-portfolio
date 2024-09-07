@@ -1,2 +1,2 @@
-import useScrollToAnchor from "./useScrolltoAnchor";
+import useScrollToAnchor from "./useScrollToAnchor";
 export { useScrollToAnchor };
