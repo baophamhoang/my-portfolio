@@ -84,6 +84,9 @@
 .front {
   background: linear-gradient(to left, #f7f7f7 80%, #eee 100%);
   border-radius: 0.5em;
+  &:not(.cover) {
+    border-width: 1em 1em 1em 0;
+  }
 
   &::after {
     right: 1em;
@@ -91,7 +94,10 @@
 }
 .back {
   background-image: linear-gradient(to right, #f7f7f7 80%, #eee 100%);
-  border-radius: 0.5em 0.1em 0.1em 0.5em;
+  border-radius: 0.5em;
+  &:not(.cover) {
+    border-width: 1em 0 1em 1em;
+  }
 
   &::after {
     left: 1em;
@@ -107,7 +113,11 @@
   //   #D0B8A8;
   // color: #453b3b;
   // border: 10px solid #C5705D;
-  
-  color: #fff ;
-  background: radial-gradient(circle farthest-corner at 80% 20%, #9a4beb 0%, #4886ff 100%), #D0B8A8;
+  color: #fff;
+  background: radial-gradient(
+      circle farthest-corner at 80% 20%,
+      #9a4beb 0%,
+      #4886ff 100%
+    ),
+    #d0b8a8;
 }
