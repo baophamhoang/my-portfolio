@@ -1,8 +1,8 @@
-import { LOADING_GIF } from "@configs";
+import { FALLBACK_IMG, LOADING_GIF } from "@configs";
 import { Image, ImageProps, Stack } from "@mantine/core";
 import React, { ReactEventHandler, useState } from "react";
 
-const ImageDisplay: React.FC<Props> = (props) => {
+const ImageDisplay: React.FC<Props> = ({ isIcon, ...props }) => {
   const [loaded, setLoaded] = useState<boolean>(false);
   const onImageLoaded: ReactEventHandler<HTMLImageElement> = (e) => {
     setLoaded(true);
@@ -17,12 +17,15 @@ const ImageDisplay: React.FC<Props> = (props) => {
       <Image
         style={loaded ? { ...props.style } : { display: "none" }}
         onLoad={onImageLoaded}
+        fallbackSrc={FALLBACK_IMG}
         {...props}
       />
     </>
   );
 };
 
-interface Props extends ImageProps {}
+interface Props extends ImageProps {
+  isIcon?: boolean;
+}
 
 export default ImageDisplay;

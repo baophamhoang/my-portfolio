@@ -1,0 +1,12 @@
+.card {
+  background: transparent;
+  border: solid 3px var(--mantine-color-blue-5);
+
+  @include hover {
+    cursor: pointer;
+    border-color: transparent;
+    background-color: var(--mantine-color-blue-6);
+    color: var(--mantine-color-white);
+    transition: ease-in 0.2s;
+  }
+}
