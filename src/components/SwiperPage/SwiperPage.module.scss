@@ -31,6 +31,10 @@
   background-color: #fff;
   /* Fix backface visibility Firefox: */
   translate: 0px;
+
+  @include smaller-than($mantine-breakpoint-md) {
+    overflow-y: auto;
+  }
 }
 
 .front {

@@ -27,13 +27,13 @@ const PageOneFront: React.FC = () => {
         <Title order={3}>Software Engineer</Title>
         <Group mt={5}>
           <ActionIcon variant="gradient">
-            <FaLinkedin />
+            <FaLinkedin style={{ width: "1em" }} />
           </ActionIcon>
           <ActionIcon variant="gradient">
-            <MdMail />
+            <MdMail style={{ width: "1em" }} />
           </ActionIcon>
           <ActionIcon variant="gradient">
-            <FaSquarePhoneFlip />
+            <FaSquarePhoneFlip style={{ width: "1em" }} />
           </ActionIcon>
         </Group>
       </Stack>
@@ -44,7 +44,7 @@ const PageOneFront: React.FC = () => {
           since the 1500s.
         </Text>
       </Stack>
-      <Stack mt={10} align='center'>
+      <Stack mt={10} align="center">
         <Group>
           <Button>Explore my CV</Button>
         </Group>
