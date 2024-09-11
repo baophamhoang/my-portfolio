@@ -1,0 +1,20 @@
+.box {
+  width: 60px;
+  height: 60px;
+  padding: 5px 5px 5px 15px;
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100px;
+  transition: ease-in-out 0.2s;
+
+  &.open {
+    width: 180px;
+  }
+}
+
+button.burger {
+  --burger-color: var(--mantine-color-white);
+}
+
+button.nightlight-btn {
+  border-color: white;
+}
