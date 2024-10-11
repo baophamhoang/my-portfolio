@@ -12,6 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  :focus {
+    outline-width: 3px;
+    outline-style: dashed;
+    outline-color: orange;
+  }
+
   @include light {
     color: #213547;
     background-color: #ffffff;
@@ -88,4 +94,10 @@ button:focus-visible {
 svg {
   width: 100%;
   height: 100%;
+}
+
+button {
+  &[data-variant="transparent"] {
+    background: transparent;
+  }
 }
